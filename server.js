@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const hbs = require('hbs');
 
+const port = process.env.PORT || 3000;
 // initialize app
 const app = express();
 // add support for partials
@@ -61,6 +62,6 @@ app.get('/bad', (req, res) => {
 });
 
 // listen on port 3000
-app.listen(3000, () => {
-  console.log('Server is up on port 3000');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
